@@ -3,18 +3,15 @@ class MenuScene extends Phaser.Scene{
     super("MenuScene");
   }
   preload(){
-    this.load.image('spaceship', 'assets/image/spaceship.png');
-    this.load.image('dirt','assets/image/dirt2.png');
-    this.load.image('stone','assets/image/stone.png');
+    this.load.image('spaceship', 'spaceship.png');
+    this.load.image('dirt','dirt2.png');
+    this.load.image('stone','stone.png');
   } 
   create(){
     var stone = this.physics.add.image(600,100, 'stone').setScale(0.5);
     var dirt = this.dirt = this.physics.add.image(100,100, 'dirt').setScale(0.5);
     var spaceship = this.spaceship = this.physics.add.image(650,300, 'spaceship');
-    
-    //Camera Follow
-    //this.cameras.main.startFollow(this.spaceship);
-    
+
     dirt.setVelocity(500,300);
     dirt.setBounce(1,1);
     dirt.setCollideWorldBounds(true);
