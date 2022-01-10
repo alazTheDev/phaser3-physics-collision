@@ -3,7 +3,7 @@ class LoadScene extends Phaser.Scene {
     super("LoadScene");
   }
   preload() {
-    this.load.image('start','assets/image/spaceship.png');
+    this.load.image('start','spaceship.png');
   }
   create() {
     var button = this.add.image(config.width/2.4,config.height/2.8, 'start').setOrigin(0, 0).setScale(2).setInteractive();
